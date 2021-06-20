@@ -9,7 +9,7 @@ build:
 	@dd if=boot.bin of=boot.img seek=0 count=1 conv=notrunc
 	@mkdir iso
 	@cp boot.img iso/
-	@genisoimage -quiet -V 'MYOS' -input-charset iso8859-1 -o elike.iso -b boot.img -hide boot.img iso/
+	@genisoimage -quiet -V 'elike' -input-charset iso8859-1 -o elike.iso -b boot.img -hide boot.img iso/
 clean:
 	@rm *.img
 	@rm *.bin
